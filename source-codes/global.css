@@ -1,0 +1,521 @@
+/*  use these colors instead */
+:root {
+  --pastel-rose: #e9cfcf;
+  --off-white: #fef1d9;
+  --olive-green-50: #c9d1c8;
+  --olive-green-100: #94a591;
+  --olive-green-200: #586f54;
+  --warm-brown-100: #9d8d70;
+  --warm-brown-200: #796d56;
+  --warm-brown-900: #383329;
+  --text-default: #1f1f1f;
+}
+
+.fontBold {
+  font-weight: bolder;
+}
+
+.divHeader {
+  font-family: "Playfair Display";
+  /* display: grid;
+  grid-template-columns: 1fr 700px;
+  margin: 0px;
+  /* padding-left: 200px;  */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  /* grid-template-rows: 1.5fr 1fr 1fr; */
+  gap: 0px 0px;
+  justify-content: stretch;
+}
+
+.headerText {
+  color: var(--warm-brown-200);
+  margin: 100px 0px 0px 200px;
+  font-size: 30px;
+  letter-spacing: -0.06em;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-image: url(../images/beigeGray.jpg);
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+.headerTop {
+  font-weight: bold;
+  color: var(--warm-brown-900);
+}
+
+.leaves {
+  /*position: ; */
+  position: absolute;
+  width: auto;
+  height: 840px;
+  margin: 0%;
+  top: -80px;
+  right: 0px;
+  background-blend-mode: multiply;
+}
+
+.coconut {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  left: 800px;
+  top: 400px;
+}
+
+.drinksTitle {
+  /* position: absolute; */
+  align-content: right;
+  font-family: "Playfair Display";
+  font-size: 128px;
+  font-weight: thin !important;
+  line-height: 86.5%;
+  letter-spacing: -0.06em;
+  color: var(--olive-green-200);
+  margin-top: 100px;
+  padding-left: 200px;
+}
+
+.divHeaderContainer {
+  margin-bottom: 100px;
+}
+
+/* NAVIGATION BAR */
+.navbar>ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 30px;
+  margin-bottom: 200px;
+  font-weight: normal;
+  flex-direction: row;
+}
+
+.navbar {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: normal;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a08c74;
+  opacity: 30%;
+}
+
+.navbar li {
+  z-index: 100 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: thin;
+}
+
+.navbar li a {
+  color: white !important;
+}
+
+.navBarContent {
+  z-index: 9999;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: white !important;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 30px;
+  /* padding: 0% 500px; */
+}
+
+/* Dropdown text color */
+.dropdown-menu .dropdown-item {
+  font-weight: bold;
+  color: black !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--olive-green-100);
+}
+
+.container a {
+  color: white;
+}
+
+/* Start of Main page card drinks css */
+
+/* End of Main page card drinks css */
+
+/* Start of Main page card code css */
+.cardCodeContainer {
+  background-image: url(../images/beigeDarkGray.jpg);
+  height: auto;
+}
+
+.cardCodeContainer h1 {
+  font-family: "Playfair Display";
+  font-size: 60px;
+  line-height: 103.5%;
+  letter-spacing: -0.06em;
+  color: #f7f7f7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardCodeContainerTitle {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 96px;
+  color: #fddbf6;
+}
+
+#cardCodeContainerText {
+  padding-top: 200px;
+}
+
+
+.cardCodeContainer p {
+  color: var(--warm-brown-900);
+  font-size: 30px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.cardCodeContainer {
+  height: 1500px;
+}
+
+.cardCodeContainer a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.cardCode {
+  height: 900px;
+  border: 5px solid violet;
+  /* temporary */
+}
+
+/* (4th container) Start of Main page shop card css */
+.shopCardContainer {
+  background-image: url(../images/bgMossGreen.jpg);
+  /* border: 5px solid violet; */
+}
+
+.shopCards {
+  /* border: 5px solid violet; */
+}
+
+/* (4th container) End of Main page shop card css */
+.shopCardContainer {
+  padding-top: 100px;
+}
+
+.shopCardHeaderText h1 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 120px;
+  text-align: center;
+  letter-spacing: -0.06em;
+  color: white;
+}
+
+.shopCardHeaderText h2 {
+  text-align: center;
+  color: var(--off-white);
+  font-size: 70px;
+  letter-spacing: -0.06em;
+  line-height: 103.5%;
+}
+
+.shopCardHeader p {
+  text-align: center;
+  color: var(--off-white);
+  font-size: 20px;
+  margin-top: 30px;
+  letter-spacing: -0.06em;
+}
+
+/* EXPERIMENTS */
+.cardDrinkContainer {
+  /* border: 5px solid violet; */
+  height: 1500px;
+  /* temporary */
+}
+
+.cardDrinkContainerText {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: -0.06em;
+  color: var(--olive-green-200);
+  line-height: 86.5%;
+}
+
+.cardDrinkOuter {
+  border: 5px solid violet;
+}
+
+.cardDrink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 2em;
+  /* temporary */
+  /* temporary */
+  position: relative;
+  width: 100%;
+  height: 1200px;
+}
+
+.cardDrink .cardDrinkHolder {
+  flex: 0 0 30%;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(0.6) translateY(-2rem);
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: #2e5266;
+  background: linear-gradient(to top, #2e5266, #6e8898);
+  transition: 1s;
+}
+
+.cardDrink .cardDrinkHolder:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.cardDrink .cardDrinkHolder.active {
+  z-index: 3;
+  -webkit-transform: scale(1) translateY(0) translateX(0);
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.transition {
+  transition: 0.7s;
+}
+
+.cardDrink .cardDrinkHolder.prev,
+.cardDrink .cardDrinkHolder.next {
+  z-index: 2;
+  -webkit-transform: scale(0.8) translateY(0) translateX(0);
+  transform: scale(0.8) translateY(0) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.cardDrink .cardDrinkHolder:nth-child(0):before {
+  content: "0";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.cardDrink .cardDrinkHolder:nth-child(1):before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.cardDrink .cardDrinkHolder:nth-child(2):before {
+  content: "2";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.cardDrink .cardDrinkHolder:nth-child(3):before {
+  content: "3";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+
+.shopCardHeaderHR {
+  height: 2px;
+  color: var(--off-white);
+  opacity: 100%;
+  margin: 50px 0;
+}
+
+.shopCardHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.shopCardHolder img {
+  z-index: 100;
+}
+
+.shopCardHolderContent {
+  position: relative;
+}
+
+.shopCardHolderContent img {
+  position: relative;
+  z-index: 7;
+}
+
+.shopCardHolderTextLeft {
+  /* placement */
+  position: absolute;
+  left: -100px;
+  bottom: -80px;
+
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  color: var(--off-white);
+  letter-spacing: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 30px;
+}
+
+.shopCardHolderTextRight {
+  position: absolute;
+  top: 20%;
+  left: 550px;
+  width: 500px;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  color: white;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+  font-size: 50px;
+  z-index: 9;
+}
+
+.shopCardHolderTextRight hr {
+  height: 2px;
+  width: 200px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.shopCardHolderSubText {
+  color: var(--pastel-rose);
+  font-style: italic;
+  font-size: 20px;
+}
+
+.shopCardImageGradientOverlay {
+  position: absolute;
+  content: '';
+  z-index: 8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 82%, rgba(0, 0, 0, 0.3533788515406162) 100%);
+  border-radius: 9999px;
+}
+
+.shopCardImageBackground {
+  position: absolute;
+  content: '';
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+}
+
+.jeddGradient {
+  background: linear-gradient(#f12711, #f5af19);
+}
+
+.lizGradient {
+  background: linear-gradient(#ee9ca7, #ffdde1);
+}
+
+.francescaGradient {
+  background: linear-gradient(#FC5C7D, #6A82FB);
+}
+
+.christianGradient {
+  background: linear-gradient(#2c3e50, #3498db);
+}
+
+
+/* Use when current nav item is opened / ACTIVE */
+.currentNavItem {
+  color: var(--olive-green-200);
+  /* Kayo na bahala sa color */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
