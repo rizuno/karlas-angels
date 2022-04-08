@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        .row {
+            background-color: cyan;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="display: flex; align-items: left; justify-content: center;">
+        <form action="submit.html" method="POST" style="background-color: cyan">   
+        <div class="row">
+            <label for="pname">Project Name</label>
+            <br>
+            <input type="text" id="pname" name="pname" placeholder="project name" required>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label for="assign">Assigned to</label>
+            <br>
+            <select name="text" id="text" placeholder="Ex. Merry Pelision" required>
+                <option>Francesca Tengco</option>
+                <option>Felise Sanchez</option>
+                <option>Christian Villafuerte</option>
+                <option>Jedd Fernando</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label for="sdate">Start Date</label>
+            <br>
+            <input type="date" id="sdate" name="sdate">
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label for="edate">End Date</label>
+            <br>
+            <input type="date" id="edate" name="edate">
+        </div>
+
+        <br>
+
+        <div class="row">
+            <label for="priority">Priority</label>
+            <br>
+            <input type="radio" id="high" name="priority" value="high">
+            <label for="high">High</label>
+
+            <input type="radio" id="average" name="priority" value="average">
+            <label for="average">Average</label>
+
+            <input type="radio" id="low" name="priority" value="low">
+            <label for="low">Low</label>
+        </div>
+
+        <div class="row">
+            <label for="description">Description</label>
+            <br>
+            <input type="text" id="description" name="description">
+        </div>
+
+        <br>
+
+        <div class="row">
+        <legend>
+            <input type="submit" style="background-color: green; color: white; border-style: none; padding: 10px;">
+            <input type="reset" style="background-color: blue; color: white; border-style: none; padding: 10px;">
+        </legend>
+        </div>
+    </div>
+</form> 
+</body>
+</html>

@@ -110,7 +110,7 @@ body {
     position: sticky;
     top: 0px;
     z-index: 10;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
 }
 
 .navbar::before {
@@ -122,7 +122,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: #a08c74;
-    opacity: 30%;
+    opacity: 40%;
 }
 
 .navbar li {
@@ -228,10 +228,28 @@ a:active {
     text-decoration: none;
 }
 
-.cardCode {
-    height: 900px;
+.cardCodeCarousel {
+    height: 600px;
     border: 5px solid violet;
     /* temporary */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardCodeHolder {
+    border: 5px solid violet;
+    background-color: gray;
+    height: 500px;
+    width: 500px;
+}
+
+.cardCodeHolder:nth-child(1),
+.cardCodeHolder:nth-child(2),
+.cardCodeHolder:nth-child(6),
+.cardCodeHolder:nth-child(7) {
+    flex: 0 0 0%;
+    opacity: 0;
 }
 
 
@@ -380,42 +398,6 @@ a:active {
     color: #fff;
 }
 
-.cardDrink .cardDrinkHolder:nth-child(1):before {
-    content: "1";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 3rem;
-    font-weight: 300;
-    color: #fff;
-}
-
-.cardDrink .cardDrinkHolder:nth-child(2):before {
-    content: "2";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 3rem;
-    font-weight: 300;
-    color: #fff;
-}
-
-.cardDrink .cardDrinkHolder:nth-child(3):before {
-    content: "3";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 3rem;
-    font-weight: 300;
-    color: #fff;
-}
-
 .shopCardHeaderHR {
     height: 2px;
     color: var(--off-white);
@@ -528,7 +510,7 @@ a:active {
 /* Use when current nav item is opened / ACTIVE */
 
 .currentNavItem {
-    color: var(--olive-green-100);
+    color: var(--off-white);
     padding: 0px 10px;
     font-weight: 700;
     border-bottom: 1px solid var(--off-white);
@@ -652,26 +634,154 @@ a:active {
     margin-top: 100px;
 }
 
-.codeFlashCard1,
-.codeFlashCard2,
-.codeFlashCard3,
-.codeFlashCard4,
-.codeFlashCard5,
-.codeFlashCard6 {
+.codeFlashCard {
     background-color: var(--off-white-200);
     align-items: center;
-    text-align: center;
     height: 100px;
     display: inline-block;
     vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.codeFlashCard2 {}
+.headerContainer {
+    text-align: center;
+    font-family: 'Playfair Display';
+    letter-spacing: -0.06em;
+}
 
-.codeFlashCard3 {}
+.headerContainer h1 {
+    color: var(--olive-green-200);
+    margin-top: 150px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 103.5%;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-.codeFlashCard4 {}
+.headerContainer p {
+    font-style: normal;
+    font-size: 64px;
+    line-height: 103.5%;
+    /* or 66px */
+    text-align: center;
+    color: var(--warm-brown-100);
+    margin-bottom: 300px;
+}
 
-.codeFlashCard5 {}
+.profileContainer {
+    margin: auto;
+    width: 1500px;
+    height: 1000px;
+    background-image: url(../images/bgMossGreen.jpg);
+}
 
-.codeFlashCard6 {}
+.iconContainer {
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.iconContainer img {
+    background-color: var(--olive-green-200);
+}
+
+.iconMember {
+    height: 230px;
+    width: 230px;
+    transform: translate(0, -125px);
+    filter: grayscale(100%);
+    /* border: 20px solid var(--off-white-200); */
+    border-radius: 9999px;
+    /*negative number para umangat sa 2nd param*/
+}
+
+.iconMember:hover {
+    filter: grayscale(0%);
+}
+
+.iconMember:active {
+    height: 380px;
+    border: 30px solid var(--warm-brown-900);
+    width: 380px;
+    filter: grayscale(0%);
+    border-radius: 9999px;
+    transform: translate(0, -180px)
+}
+
+.memberName {
+    color: var(--off-white);
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 128px;
+    line-height: 89%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 100px;
+}
+
+.skillsInterestContainer {
+    display: flex;
+    align-content: center;
+    border: 1px solid aqua;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    color: var(--off-white);
+}
+
+.skillsInterestContainer h2 {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 100px;
+}
+
+.skillsContainer {
+    background-color: var(--warm-brown-900);
+    border: 1px solid red;
+    width: 33%;
+    padding: 20px;
+    height: 300px;
+}
+
+.interestContainer {
+    background-color: var(--warm-brown-900);
+    border: 1px solid blue;
+    width: 33%;
+    height: 300px;
+    padding: 20px;
+}
+
+.shopPreview h2 {
+    margin-top: 100px;
+    display: flex;
+    margin: auto;
+    background-color: var(--warm-brown-900);
+    border: 1px solid yellow;
+    height: 500px;
+    width: 69%;
+    color: var(--off-white);
+    text-align: center;
+}
+
+
+/* lower carousel button */
+
+.carouselButtons {
+    margin: auto;
+    width: 25%;
+    display: flex;
+}
+
+.carouselButtons span {
+    text-align: center;
+    font-size: 50px;
+    width: 50%;
+}

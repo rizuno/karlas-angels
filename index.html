@@ -61,22 +61,6 @@
         </div>
         <!-- <script src="/sourceCodes/index.js"></script> -->
     </div>
-    <!-- end of container1 -->
-
-    <!-- START navigation bar -->
-    <!-- <div class="navBar">
-      <span >
-        <img class="imageHeader" src="/images/final-logo.png"></img>
-      </span>
-        <ul>
-          <li><a><strong>KARLA&apos;S ANGELS</strong></a></li>
-          <li><a>about us</a></li>
-          <li><a>codes</a></li>
-          <li><a>shops</a></li>
-        </ul>
-    </div> -->
-    <!-- end of nav bar -->
-
 
     <!-- BOOTSTRAP NAV BAR -->
 
@@ -188,37 +172,37 @@
         }
 
         $(".cardDrinkHolder").click(function() {
-
-
             $slide = window.innerWidth * .25;
-
+            var selected = $(this)
             if ($(this).hasClass("next")) {
-                $(".cardDrink").addClass("transition")
+
                 $(".cardDrink")
                     .stop(false, true)
-                    .css('transform', 'translateX(' + "-=" + 30 + '%')
-                    // $(".cardDrink").removeClass("transition")
-                    // $(".cardDrink").css('transform','translateX(0px)')
-                    // .animate({ left: "-=" + "30%" });
+                    .animate({
+                        left: "-=" + "30%"
+                    }, function() {
+                        $(".cardDrink").css({
+                            "left": "0"
+                        });
+                        $(".cardDrinkHolder:last").after($(".cardDrinkHolder:first"));
+                    });
             } else if ($(this).hasClass("prev")) {
                 $(".cardDrink")
                     .stop(false, true)
-                    .css('transform', 'translateX(' + "+=" + 30 + '%')
-                    // .animate({ left: "+=" + "30%" });
+                    .animate({
+                        left: "+=" + "30%"
+                    }, function() {
+                        $(".cardDrink").css({
+                            "left": "0"
+                        });
+                        $(".cardDrinkHolder:first").before($(".cardDrinkHolder:last"));
+                    });
             }
-
-            $(this).removeClass("prev next");
-            $(this).siblings().removeClass("prev active next");
-
-            $(this).addClass("active");
-            // $(this).prev().prev().addClass("excluded");
-            $(this).prev().addClass("prev");
-            // $(this).prev().removeClass("excluded")
-            $(this).next().addClass("next");
-            // $(this).next().removeClass("excluded");
-            // $(this).next().next().addClass("excluded");
-
-
+            selected.removeClass("prev next");
+            selected.siblings().removeClass("prev active next");
+            selected.addClass("active");
+            selected.prev().addClass("prev");
+            selected.next().addClass("next");
         });
 
         // Keyboard nav
@@ -232,6 +216,7 @@
             }
         });
     </script>
+
     <!-- end of 2nd container -->
 
     <!-- start of 3rd container -->
@@ -241,31 +226,134 @@
             <p>2022
                 <p>
                     <span class="cardCodeContainerSubText">
-          <p>click <span><a href="/source-codes/codePage.html" class="fontBold"> here </a><span> to view our codes</p>
+          <p>click <span><a href="/source-codes/code-page.html" class="fontBold"> here </a><span> to view our codes</p>
           </span>
         </div>
 
         <div class="cardCode">
-            <!-- start of 1 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 2 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 3 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 4 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 5 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 6 -->
-            <div class="cardCodeHolder"></div>
-            <!-- start of 7 -->
-            <div class="cardCodeHolder"></div>
-
             <p>SCROLL TO NAVIGATE OR CLICK AND DRAG
             </p>
+            <div class="cardCodeCarousel">
+                <!-- start of 1 -->
+                <div class="cardCodeHolder">1</div>
+                <!-- start of 2 -->
+                <div class="cardCodeHolder">2</div>
+                <!-- start of 3 -->
+                <div class="cardCodeHolder">3</div>
+                <!-- start of 4 -->
+                <div class="cardCodeHolder">4</div>
+                <!-- start of 5 -->
+                <div class="cardCodeHolder">5</div>
+                <!-- start of 6 -->
+                <div class="cardCodeHolder">6</div>
+                <!-- start of 7 -->
+                <div class="cardCodeHolder">7</div>
+            </div>
+            <div class="carouselButtons">
+                <span id="leftClick">&lt;</span>
+                <span id="rightClick">></span>
+            </div>
+
+
 
         </div>
+        <script>
+            $num = $(".cardCodeHolder").length;
+            $even = $num / 2;
+            $odd = ($num + 1) / 2;
+            $initial = 0;
+            if ($num % 2 == 0) {
+                $(".cardCodeHolder:nth-child(" + $even + ")").addClass("active");
+                $(".cardCodeHolder:nth-child(" + $even + ")")
+                    .prev()
+                    .addClass("prev");
+                $(".cardDCodeHolder:nth-child(" + $even + ")")
+                    .next()
+                    .addClass("next");
+            } else {
+                $(".cardCodeHolder:nth-child(" + $odd + ")").addClass("active");
+                $(".cardCodeHolder:nth-child(" + $odd + ")")
+                    .prev()
+                    .addClass("prev");
+                $(".cardCodeHolder:nth-child(" + $odd + ")")
+                    .next()
+                    .addClass("next");
+            }
 
+            function leftAnimation() {
+                $(".cardCode")
+                    .stop(false, true)
+                    .animate({
+                        left: "-=" + "30%"
+                    }, function() {
+                        $(".cardCode").css({
+                            "left": "0"
+                        });
+                        $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
+                    });
+            }
+
+            function rightAnimation() {
+                $(".cardCode")
+                    .stop(false, true)
+                    .animate({
+                        left: "+=" + "30%"
+                    }, function() {
+                        $(".cardCode").css({
+                            "left": "0"
+                        });
+                        $(".cardCodeHolder:first").before($(".cardCodeHolder:last"));
+                    });
+            }
+            $(".cardCodeHolder").click(function() {
+                var selected = $(this)
+                if ($(this).hasClass("next")) {
+                    $(".cardCode")
+                        .stop(false, true)
+                        .animate({
+                            left: "-=" + "30%"
+                        }, function() {
+                            $(".cardCode").css({
+                                "left": "0"
+                            });
+                            $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
+                        });
+                } else if ($(this).hasClass("prev")) {
+                    $(".cardCode")
+                        .stop(false, true)
+                        .animate({
+                            left: "+=" + "30%"
+                        }, function() {
+                            $(".cardCode").css({
+                                "left": "0"
+                            });
+                            $(".cardCodeHolder:first").before($(".cardCodeHolder:last"));
+                        });
+                }
+                selected.removeClass("prev next");
+                selected.siblings().removeClass("prev active next");
+                selected.addClass("active");
+                selected.prev().addClass("prev");
+                selected.next().addClass("next");
+            });
+
+            // Keyboard nav
+            $("html body").keydown(function(e) {
+                if (e.keyCode == 37) {
+                    // left
+                    $(".active").prev().trigger("click");
+                } else if (e.keyCode == 39) {
+                    // right
+                    $(".active").next().trigger("click");
+                }
+            });
+            $("#leftClick").click(function() {
+                $(".active").prev().trigger("click");
+            })
+            $("#rightClick").click(function() {
+                $(".active").next().trigger("click");
+            })
+        </script>
 
     </div>
     <!-- end of 3rd container -->
@@ -352,7 +440,7 @@
                     <a href="/source-codes/machine-problems/TENGCO-MP07/Home.html" target="_blank">
                         <div class="shopCardImageGradientOverlay"></div>
                         <div class="shopCardImageBackground francescaGradient"></div>
-                        <img src="https://avatars.dicebear.com/api/micah/2881014372.svg" height="600" width="600" alt="img 1">
+                        <img src="https://avatars.dicebear.com/api/micah/15566778899999.svg" height="600" width="600" alt="img 1">
                     </a>
                     </a>
                 </div>
@@ -372,9 +460,11 @@
                         <span>CHRISTIAN</span>
                         <span>VILLAFUERTE</span>
                     </div>
-                    <div class="shopCardImageGradientOverlay"></div>
-                    <div class="shopCardImageBackground christianGradient"></div>
-                    <img src="https://avatars.dicebear.com/api/micah/8399827362.svg" height="600" width="600" alt="img 1">
+                    <a href="/source-codes/machine-problems/VILLAFUERTE-MP07/home.html" target="_blank">
+                        <div class="shopCardImageGradientOverlay"></div>
+                        <div class="shopCardImageBackground christianGradient"></div>
+                        <img src="https://avatars.dicebear.com/api/micah/8399827362.svg" height="600" width="600" alt="img 1">
+                    </a>
                 </div>
             </div>
             <!-- end of card 4 -->
