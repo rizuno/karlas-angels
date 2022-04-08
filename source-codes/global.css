@@ -3,6 +3,7 @@
 :root {
     --pastel-rose: #e9cfcf;
     --off-white: #fef1d9;
+    --off-white-200: #A59E91;
     --olive-green-50: #c9d1c8;
     --olive-green-100: #94a591;
     --olive-green-200: #586f54;
@@ -544,21 +545,21 @@ a:active {
 .codePreviewContainer {
     background-image: url(../images/beigeDarkGray.jpg);
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .flipCardContainer {
-    border: 1px solid red;
     display: block;
     align-items: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: 1400px;
     height: 1000px;
     margin-top: 100px;
     margin-bottom: 100px;
     flex-wrap: wrap;
-    background-color: var(--warm-brown-900);
+    background-color: var(--off-white-200);
     box-shadow: 21px 20px 0px 3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 21px 20px 0px 3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 21px 20px 0px 3px rgba(0, 0, 0, 0.75);
@@ -578,7 +579,8 @@ a:active {
     letter-spacing: -0.06em;
     color: var(--olive-green-200);
     position: absolute;
-    left: 350px
+    left: 350px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .codePreviewHeader p {
@@ -607,10 +609,69 @@ a:active {
 
 .codePreviewHeader img {
     position: absolute;
-    width: 380px;
-    height: 320px;
-    left: 1200px;
+    width: 880px;
+    height: 420px;
+    left: 1000px;
     top: 230px;
     background: url(coconut-png-24812.png);
     transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: scaleX(-1);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.codePreviewContainer h1 {
+    position: absolute;
+    width: 433px;
+    height: 358px;
+    left: 167px;
+    top: 896px;
+    font-family: 'Playfair Display';
+    font-size: 128px;
+    line-height: 86.5%;
+    letter-spacing: -0.06em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+}
+
+.codePreviewContainer h2 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-size: 64px;
+    line-height: 86.5%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    color: var(--off-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.codeCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.codeFlashCard1,
+.codeFlashCard2,
+.codeFlashCard3,
+.codeFlashCard4,
+.codeFlashCard5,
+.codeFlashCard6 {
+    background-color: var(--off-white-200);
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.codeFlashCard2 {}
+
+.codeFlashCard3 {}
+
+.codeFlashCard4 {}
+
+.codeFlashCard5 {}
+
+.codeFlashCard6 {}
