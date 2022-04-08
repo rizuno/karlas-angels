@@ -251,10 +251,8 @@
     <div class="cardCodeContainer">
         <div class="container" id="cardCodeContainerText">
             <h1><span class="cardCodeContainerTitle">Karla&apos;s Angels </span> are <br /> made of aesthetic outputs that is made <br/>by web developers and software engineers.</h1>
-            <p>2022
-                <p>
-                    <span class="cardCodeContainerSubText">
-          <p>click <span><a href="/source-codes/code-page.html" class="fontBold"> here </a><span> to view our codes</p>
+            <span class="cardCodeContainerSubText">
+          <p>click <span><a href="/source-codes/codes.html" class="fontBold"> here  </a><span> to view our codes</p>
           </span>
         </div>
 
@@ -289,6 +287,7 @@
             $even = $num / 2;
             $odd = ($num + 1) / 2;
             $initial = 0;
+            var selected;
             if ($num % 2 == 0) {
                 $(".cardCodeHolder:nth-child(" + $even + ")").addClass("active");
                 $(".cardCodeHolder:nth-child(" + $even + ")")
@@ -316,8 +315,16 @@
                         $(".cardCode").css({
                             "left": "0"
                         });
-                        $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
+
+                        $(".cardCodeHolder:last").before($(".cardCodeHolder:first"));
+
                     });
+                console.log(selected);
+                selected.removeClass("prev next");
+                selected.siblings().removeClass("prev active next");
+                selected.addClass("active");
+                selected.prev().addClass("prev");
+                selected.next().addClass("next");
             }
 
             function rightAnimation() {
@@ -329,8 +336,14 @@
                         $(".cardCode").css({
                             "left": "0"
                         });
-                        $(".cardCodeHolder:first").before($(".cardCodeHolder:last"));
+                        $(".cardCodeHolder:first").after($(".cardCodeHolder:last"));
                     });
+                console.log(selected);
+                selected.removeClass("prev next");
+                selected.siblings().removeClass("prev active next");
+                selected.addClass("active");
+                selected.prev().addClass("prev");
+                selected.next().addClass("next");
             }
             $(".cardCodeHolder").click(function() {
                 var selected = $(this)
@@ -343,7 +356,7 @@
                             $(".cardCode").css({
                                 "left": "0"
                             });
-                            $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
+                            $(".cardCodeHolder:first").before($(".cardCodeHolder:last"));
                         });
                 } else if ($(this).hasClass("prev")) {
                     $(".cardCode")
@@ -354,7 +367,6 @@
                             $(".cardCode").css({
                                 "left": "0"
                             });
-                            $(".cardCodeHolder:first").before($(".cardCodeHolder:last"));
                         });
                 }
                 selected.removeClass("prev next");
@@ -362,6 +374,7 @@
                 selected.addClass("active");
                 selected.prev().addClass("prev");
                 selected.next().addClass("next");
+                $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
             });
 
             // Keyboard nav
@@ -375,10 +388,14 @@
                 }
             });
             $("#leftClick").click(function() {
-                $(".active").prev().trigger("click");
+                selected = $(".cardCodeHolder prev");
+                console.log(selected)
+                leftAnimation();
             })
             $("#rightClick").click(function() {
-                $(".active").next().trigger("click");
+                selected = $(".cardCodeHolder next");
+                console.log(selected)
+                rightAnimation();
             })
         </script>
 

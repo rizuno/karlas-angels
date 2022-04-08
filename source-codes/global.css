@@ -165,7 +165,7 @@
     
     .cardCodeContainer {
         background-image: url(../images/beigeDarkGray.jpg);
-        height: auto;
+        height: 1400px;
     }
     
     .cardCodeContainer h1 {
@@ -196,7 +196,7 @@
     }
     
     .cardCodeContainer {
-        height: 1500px;
+        height: 2000px;
     }
     
     .cardCodeContainer a {
@@ -220,19 +220,55 @@
     }
     
     .cardCodeCarousel {
-        height: 600px;
+        /* height: 600px;
         border: 5px solid violet;
-        /* temporary */
+       
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 2em;
+        position: relative;
+        width: 100%;
+        height: 1200px;
     }
     
-    .cardCodeHolder {
-        border: 5px solid violet;
-        background-color: gray;
-        height: 500px;
-        width: 500px;
+    .cardCodeCarousel .cardCodeHolder {
+        flex: 0 0 30%;
+        gap: 60px;
+        height: 800px;
+        width: 200px;
+        position: relative;
+        z-index: 1;
+        -webkit-transform: scale(0.6) translateY(-2rem);
+        transform: scale(0.6) translateY(-2rem);
+        opacity: 100;
+        cursor: pointer;
+        pointer-events: none;
+        background-color: var(--olive-green-100);
+        transition: 1s;
+        box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
+    }
+    
+    .cardCodeCarousel .cardCodeHolder:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        border-radius: 100%;
+        /* background-color: rgba(0, 0, 0, 0.3); */
+        bottom: -5rem;
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+    }
+    
+    .cardCodeHolder img {
+        height: 100%;
     }
     
     .cardCodeHolder:nth-child(1),
@@ -241,6 +277,45 @@
     .cardCodeHolder:nth-child(7) {
         flex: 0 0 0%;
         opacity: 0;
+    }
+    
+    .cardCodeHolderHolderTextImage {
+        color: white;
+        z-index: 30;
+        background-color: none !important;
+        transform: translate(50px, -700px);
+        opacity: 100%;
+        text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.99);
+    }
+    
+    .cardCodeHolderTextImage:active {
+        opacity: 100%;
+    }
+    
+    .cardCodeHolderTextImage:after {
+        z-index: 30;
+        background-color: none !important;
+        transform: translate(0, 10px);
+        opacity: 100%;
+    }
+    
+    .cardCode .cardCodeHolder.active {
+        z-index: 3;
+        -webkit-transform: scale(1) translateY(0) translateX(0);
+        transform: scale(1) translateY(3) translateX(1);
+        opacity: 1;
+        pointer-events: auto;
+        transition: 1s;
+    }
+    
+    .cardCode .cardCodeHolder.prev,
+    .cardCode .cardCodeHolder.next {
+        z-index: 2;
+        -webkit-transform: scale(0.8) translateY(0) translateX(0);
+        transform: scale(0.8) translateY(0) translateX(0);
+        opacity: 0.6;
+        pointer-events: auto;
+        transition: 1s;
     }
     /* (4th container) Start of Main page shop card css */
     
@@ -389,10 +464,6 @@
         transition: 1s;
     }
     
-    .transition {
-        transition: 0.7s;
-    }
-    
     .cardDrink .cardDrinkHolder.prev,
     .cardDrink .cardDrinkHolder.next {
         z-index: 2;
@@ -401,18 +472,6 @@
         opacity: 0.6;
         pointer-events: auto;
         transition: 1s;
-    }
-    
-    .cardDrink .cardDrinkHolder:nth-child(0):before {
-        content: "0";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        font-size: 3rem;
-        font-weight: 300;
-        color: #fff;
     }
     
     .shopCardHeaderHR {
@@ -577,7 +636,7 @@
         color: var(--olive-green-200);
         position: absolute;
         left: 350px;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     }
     
     .codePreviewHeader p {
@@ -709,7 +768,7 @@
     .profileContainer {
         margin: auto;
         width: 1500px;
-        height: 1500px;
+        height: 1600px;
         background-image: url(../images/bgMossGreen.jpg);
     }
     
@@ -752,11 +811,12 @@
         font-family: 'Playfair Display';
         font-style: italic;
         font-size: 128px;
-        line-height: 89%;
+        line-height: 97%;
         text-align: center;
-        letter-spacing: -0.06em;
+        letter-spacing: -0.03em;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+        transform: translate(0, -50px);
     }
     
     .skillsInterestContainer {
@@ -773,7 +833,7 @@
     .skillsInterestContainer h2 {
         text-align: right;
         font-style: italic;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     
     .skillsContainer {
@@ -792,8 +852,15 @@
         padding: 20px;
     }
     
+    .skillsContainer p,
+    .interestContainer p {
+        color: var(--olive-green-100);
+        font-weight: lighter;
+        font-style: normal;
+    }
+    
     .shopPreview {
-        margin-top: 100px;
+        margin-top: 50px;
     }
     
     .shopPreview h2 {
