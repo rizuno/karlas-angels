@@ -26,6 +26,27 @@ function loadData(member) {
     })
 }
 $(window).load(function() {
+    var currentMember = $(".iconMember:nth-child(1)");
+    currentMember.css({
+        filter: "grayscale(0%)",
+    })
+    currentMember.siblings().animate({
+        height: "230px",
+        width: "230px",
+        transform: "translate(0, -125px)"
+    });
+    currentMember.siblings().css({
+        filter: "grayscale(100%)",
+    })
+    currentMember.animate({
+        height: "380px",
+
+        width: "380px",
+        filter: "grayscale(100%)",
+        transform: "translate(0, -180px)"
+    }, function() {
+
+    });
     $.getJSON('./data.json', function(data) {
         // var skills = data["members"]["member1"][0]["skills"];
         // //console.log(data["members"]["member1"][0]["skills"])
