@@ -33,6 +33,7 @@
 
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
 </head>
 
@@ -111,49 +112,46 @@
     <div class="codePreviewContainer ">
         <h1>your code <i>preview</i></h1>
         <div class="flipCardContainer">
+            <div class="liveCodeContainer">
 
+            </div>
         </div>
 
         <h2>pick your card!</h2>
         <div class="codeCardContainer container">
             <div class="codeFlashCard">
-                <p>
-                    name ng code 1
+                <p value="billing">
+                    billing
                 </p>
             </div>
             <div class="codeFlashCard">
-                <p>
-                    name ng code 2
+                <p value="card">
+                    card
                 </p>
             </div>
             <div class="codeFlashCard">
-                <p>
-                    name ng code 3
+                <p value="forms3">
+                    forms3
                 </p>
             </div>
             <div class="codeFlashCard">
-                <p>
-                    name ng code 4
+                <p value="goodvibes">
+                    goodvibes
                 </p>
             </div>
             <div class="codeFlashCard">
-                <p>
+                <p value="project_name">
                     name ng code 5
                 </p>
 
             </div>
             <div class="codeFlashCard">
-                <p>
+                <p value="code6">
                     name ng code 6
                 </p>
             </div>
         </div>
-        <script>
-            const soureCodeData = require("pick-your-card-source-codes.json");
-            $(".codeFlashCard").click(function() {
-                console.log(sourceCodeData);
-            });
-        </script>
+        <script type="text/javascript" src="profilePages.js"></script>
     </div>
 </body>
 

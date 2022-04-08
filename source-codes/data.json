@@ -1,13 +1,24 @@
 {
-  "members": {
-    "member1": [
-      { "profilePicture": "link-to-profile-pic" },
-      { "skills": ["skill1", "skill2", "skill3"] },
-      { "interests": ["interest1", "interest2", "interest3"] },
-      { "shopDetails": "contents-to-be-discussed" }
-    ],
-    "CJ": "MEMBER 1 IS CJ",
-    "member3": "attributes",
-    "member4": "attributes"
-  }
+    "members": {
+        "member1": [
+            { "skills": ["skill1", "skill2", "skill3"] },
+            { "interests": ["interest1", "interest2", "interest3"] },
+            { "shopDetails": "contents-to-be-discussed" }
+        ],
+        "member2": [
+            { "skills": ["skill1", "skill2", "skill3"] },
+            { "interests": ["interest1", "interest2", "interest3"] },
+            { "shopDetails": "contents-to-be-discussed" }
+        ],
+        "member3": [
+            { "skills": ["skill1", "skill2", "skill3"] },
+            { "interests": ["interest1", "interest2", "interest3"] },
+            { "shopDetails": "contents-to-be-discussed" }
+        ],
+        "member4": [
+            { "skills": ["skill1", "skill2", "skill3"] },
+            { "interests": ["interest1", "interest2", "interest3"] },
+            { "shopDetails": "contents-to-be-discussed" }
+        ]
+    }
 }
