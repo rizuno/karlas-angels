@@ -77,12 +77,12 @@
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/source-codes/about.html" target="_blank">
+                        <a class="nav-link" href="/source-codes/about.html" target="#">
             about us
           </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/source-codes/codes.html" target="_blank">
+                        <a class="nav-link" href="/source-codes/codes.html" target="#">
             codes
           </a>
                     </li>
@@ -261,59 +261,60 @@
             <div class="cardCodeCarousel">
                 <!-- start of 1 -->
                 <div class="cardCodeHolder" value="billing"><span>
-                    <img src="images/codePreview1.jpg" alt="test image billing">
+                    <img src="images/codePreview1.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                        Invoice table
+                        
                     </p>
                 </span></div>
                 <!-- start of 2 -->
                 <div class="cardCodeHolder" value="card"><span>
-                    <img src="images/codePreview2.jpg" alt="test image 1 billing">
+                    <img src="images/codePreview2.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                        Marks Table
+                      
                     </p>
                 </span></div>
                 <!-- start of 3 -->
-                <div class="cardCodeHolder" value="forms3"<span>
-                    <img src="images/codePreview3.jpg" alt="test image 1 billing">
+                <div class="cardCodeHolder" value="forms3"> <span>
+                    <img src="images/codePreview3.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                        Project Name Form
                     </p>
-                </span></div>
+                    </span>
+                </div>
                 <!-- start of 4 -->
                 <div class="cardCodeHolder" value="goodvibes"><span>
-                    <img src="images/codePreview4.jpg" alt="test image 1">
+                    <img src="images/codePreview4.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                        Good Vibes Form
                     </p>
                 </span></div>
                 <!-- start of 5 -->
                 <div class="cardCodeHolder" value="code5"><span>
-                    <img src="images/codePreview5.jpg" alt="test image 1">
+                    <img src="images/codePreview5.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                       Color Table
                     </p>
                 </span></div>
                 <!-- start of 6 -->
                 <div class="cardCodeHolder" value="code6"><span>
-                    <img src="images/codePreview6.jpg" alt="test image 1">
+                    <img src="images/codePreview6.jpg" >
                     <p class="cardDrinkHolderTextImage">
-                        if you close your eyes <br/>
-                        you cannot see.
+                       Our Menu
                     </p>
                 </span></div>
                 <!-- start of 7 -->
-                <div class="cardCodeHolder" > <h1>We'll be adding more codes soon!</h1></div>
+                <div class="cardCodeHolder">
+                    <p>
+                        We'll be adding more codes soon!
+                    </p>
+                </div>
             </div>
             <div class="carouselButtons">
-                 
+
                 <button id="leftClick" class="button button5">&lt;</button>
-                
+
                 <button id="rightClick" class="button button5">&gt;</button>
             </div>
 
@@ -356,7 +357,7 @@
                                 "left": "0"
                             });
                             $(".cardCodeHolder:last").after($(".cardCodeHolder:first"));
-                            
+
                         });
                 } else if (selected.hasClass("prev")) {
                     $(".cardCode")
@@ -377,13 +378,13 @@
                 selected.next().addClass("next");
             }
 
-            $(".cardCodeHolder").click(function(){
+            $(".cardCodeHolder").click(function() {
                 var code_name = $(this).attr("value");
-                if(code_name != undefined){
-                    window.location.href="/source-codes/codes.html?code_name="+code_name;
+                if (code_name != undefined) {
+                    window.location.href = "/source-codes/codes.html?code_name=" + code_name;
                 }
             })
-            
+
             $("#leftClick").click(function() {
                 selected = $(".cardCodeHolder.prev");
                 slide();
@@ -411,6 +412,9 @@
             <!-- line -->
             <hr class="shopCardHeaderHR" />
             <p> unang kagat, singko lahat</p>
+            <span class="joke">
+                <p> joke lang po</p>
+            </span>
         </div>
         <!-- end of card header -->
         <div class="shopCards">
@@ -420,8 +424,7 @@
                     <div class="shopCardHolderTextRight">
                         <span>
                   $HON&apos;s <br>
-                  beverages <br>
-                  abcd
+                  beverages 
                 </span>
                         <hr>
                         <p class="shopCardHolderSubText">a drink a day, keeps singko away</p>
@@ -445,8 +448,7 @@
                     <div class="shopCardHolderTextRight">
                         <span>
                   KAWAII uwu <br>
-                  drink shop <br>
-                  bing bong
+                  drink shop
                 </span>
                         <hr>
                         <p class="shopCardHolderSubText">every drink you buy, <br /> you become kawaii</p>
@@ -471,7 +473,7 @@
                   Drinkable
                 </span>
                         <hr>
-                        <p class="shopCardHolderSubText">every drink you buy, <br/> you become kawaii</p>
+                        <p class="shopCardHolderSubText">come relax and <br/> chill in my cafe</p>
                     </div>
                     <div class="shopCardHolderTextLeft">
                         <span>FRANCESCA</span>
@@ -494,7 +496,7 @@
                   Villa Fuerte
                 </span>
                         <hr>
-                        <p class="shopCardHolderSubText">every drink you buy, you become kawaii</p>
+                        <p class="shopCardHolderSubText">cafe of the finest</p>
                     </div>
                     <div class="shopCardHolderTextLeft">
                         <span>CHRISTIAN</span>

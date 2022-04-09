@@ -145,6 +145,7 @@
         gap: 30px;
         /* padding: 0% 500px; */
     }
+    
     .navbar-toggler-icon {
         border: 2px solid black;
         border-radius: 2px;
@@ -238,7 +239,6 @@
         position: relative;
         width: 100%;
         height: 1200px;
-        
     }
     
     .cardCodeCarousel .cardCodeHolder {
@@ -253,12 +253,10 @@
         opacity: 100;
         cursor: pointer;
         pointer-events: none;
-   
         transition: 2s;
         box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 8px 6px 26px -4px rgba(0, 0, 0, 0.75);
-        
     }
     
     .cardCodeCarousel .cardCodeHolder:after {
@@ -276,7 +274,7 @@
     .cardCodeHolder img {
         object-fit: cover;
         height: 100%;
-        max-width:100%;
+        max-width: 100%;
     }
     
     .cardCodeHolder:nth-child(1),
@@ -331,8 +329,6 @@
         background-image: url(../images/bgMossGreen.jpg);
         /* border: 5px solid violet; */
     }
-    
-    
     /* (4th container) End of Main page shop card css */
     
     .shopCardContainer {
@@ -714,6 +710,10 @@
         margin-top: 100px;
     }
     
+    .codeCardContainer p {
+        padding-bottom: 0px !important;
+    }
+    
     .codeFlashCard {
         background-color: var(--off-white-200);
         color: #6f6762;
@@ -870,8 +870,7 @@
         margin-top: 50px;
         background-color: var(--warm-brown-900);
         align-items: center;
-        
-        width:69%;
+        width: 69%;
     }
     
     .shopPreview h2 {
@@ -885,18 +884,31 @@
         justify-content: center;
         font-style: italic;
     }
-    .shopPreview div img {
-        width:75%;
-        margin-left: 12.5%;
-        margin-right:12.5%;
-        margin-bottom:5%;
-        transition: 0.3s;
-        filter:blur(5px);
-        cursor:pointer;
+    
+    .shopPreview p {
+        display: flex;
+        padding: 20px;
+        margin: auto;
+        color: var(--olive-green-100);
+        justify-content: center;
+        font-style: normal;
+        font-size: 15px;
+        font-weight: lighter;
+        transform: translate(0, -20px);
     }
+    
+    .shopPreview div img {
+        width: 75%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        margin-bottom: 5%;
+        transition: 0.3s;
+        filter: blur(5px);
+        cursor: pointer;
+    }
+    
     .shopPreview div img:hover {
-        
-        filter:blur(0px);
+        filter: blur(0px);
     }
     /* lower carousel button */
     
@@ -906,46 +918,46 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap:8%;
-        
+        gap: 15%;
     }
     
     .carouselButtons button {
         text-align: center;
         font-size: 50px;
         width: 30%;
-        
-        
     }
+    
     #leftClick {
         background-color: white;
-        color: black;
-        border: 2px solid #555555;
+        color: #555555;
     }
+    
     #leftClick:hover {
         background-color: #555555;
         color: white;
     }
+    
     #rightClick {
         background-color: white;
-        color: black;
-        border: 2px solid #555555;
+        color: #555555;
     }
+    
     #rightClick:hover {
         background-color: #555555;
         color: white;
     }
+    
     .cardGrid {
-        height:1000px;
-        width:1400px;
-        margin:auto;
+        height: 1000px;
+        width: 1400px;
+        margin: auto;
     }
     
     .flipCardContainer {
         display: flex;
         align-items: center;
         justify-content: center;
-        float:left;
+        float: left;
     }
     
     .liveCodeContainer {
@@ -953,16 +965,27 @@
         width: 75%;
         background-color: var(--off-white-200);
     }
-    .front  {position: relative;}
-    .back       {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-    .sourceCodeArea {
-    margin:auto;
-    width:75%;
-    height:75%
+    
+    .front {
+        position: relative;
     }
-
+    
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .sourceCodeArea {
+        margin: auto;
+        width: 75%;
+        height: 75%
+    }
+    
     .button {
-        background-color: #4CAF50; /* Green */
+        background-color: #4CAF50;
         border: none;
         color: white;
         padding: 16px 32px;
@@ -973,34 +996,42 @@
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
-      }
-      .buttonToggle1 {
-        background-color: white;
-        color: black;
-        border: 2px solid #555555;
-      }
-      
-      .buttonToggle1:hover {
-        background-color: #555555;
+    }
+    
+    .buttonToggle1 {
+        background-color: var(--olive-green-200);
         color: white;
-        border: 2px solid white;
-      }
-      .buttonToggle2 {
-        background-color: #555555;
+        margin-bottom: 100px;
+        /* border: 2px solid #555555; */
+    }
+    
+    .buttonToggle1:hover {
+        box-shadow: 0px -1px 11px 0px rgba(144, 181, 144, 0.75);
+        -webkit-box-shadow: 0px -1px 11px 0px rgba(144, 181, 144, 0.75);
+        -moz-box-shadow: 0px -1px 11px 0px rgba(144, 181, 144, 0.75);
+    }
+    
+    .buttonToggle2 {
+        background-color: var(--warm-brown-900);
         color: white;
-        border: 2px solid white;
-        
-      }
-      
-      .buttonToggle2:hover {
-        background-color: white;
-        color: black;
-        border: 2px solid #555555;
-      }
-      #buttonContainer{
-        display:flex;
-        margin-top:250px;
+        margin-bottom: 100px;
+        /* border: 2px solid white; */
+    }
+    
+    .buttonToggle2:hover {
+        box-shadow: 0px -1px 11px 0px var(--olive-green-200);
+        -webkit-box-shadow: 0px -1px 11px 0px var(--olive-green-200);
+        -moz-box-shadow: 0px -1px 11px 0px var(--olive-green-200);
+    }
+    
+    #buttonContainer {
+        display: flex;
+        margin-top: 250px;
         align-items: center;
         justify-content: center;
-        }
-      
+    }
+    
+    .joke p {
+        color: var(--olive-green-100);
+        transform: translate(0, -30px);
+    }
