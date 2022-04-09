@@ -27,9 +27,8 @@ function loadData(member) {
         for (var interest in interests) {
             $(".interestContainer").append("<p>" + interests[interest] + "</p>")
         }
-        $("#shopPreviewImage").attr("value", shopData[0]); //change value to src later
-        current_shop = shopData[1];
-        console.log(current_shop);
+        $("#shopPreviewImage").attr("src", shopData[1]); //change value to src later
+        current_shop = shopData[0];
     })
 }
 $(window).load(function() {
@@ -97,13 +96,14 @@ $(".iconMember").click(function() {
     });
 
     $(this).siblings().removeClass("active");
-    $(this).siblings().addClass("TestClass");
     var current_member = $(this).attr("value");
     console.log(current_member);
     loadData(current_member);
 
 })
 
-$(".shopPreview").click(function() {
-    alert(current_shop);
+$("#shopPreviewImage").click(function() {
+    // alert(current_shop);
+    window.location.href=current_shop;
 })
+
